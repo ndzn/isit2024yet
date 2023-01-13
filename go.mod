@@ -1,4 +1,4 @@
-module isit2024yet.com
+module github.com/ndzn/isit2024yet
 
 go 1.19
 
