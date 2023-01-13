@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gofiber/fiber"
+	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) {
+	app.Get("/", func(c *fiber.Ctx) error {
 		currentYear := time.Now().Year()
 		title := "Is it 2024 yet?"
 		color := "red"
@@ -62,7 +62,7 @@ func main() {
 			</html>
 		`, title, color, message, currentTime)
 		c.Set("Content-Type", "text/html")
-		c.Send(html)
+		return c.SendString(html)
 	})
 	app.Listen(":8080")
 }
