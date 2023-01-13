@@ -48,11 +48,15 @@ func main() {
 						font-size: 10px;
 						margin: 0;
 					}
+					a {
+						color: #1a1a1a;
+					  }
 				</style>
 			</head>
 			<body>
 				<h1>%s</h1>
 				<h2>checked on %s (EST)</h2>
+				<h2>source: <a href="https://github.com/ndzn/isit202yet">github</a> </h2>
 			</body>
 			<script async src="https://vim.screenshot.download/_.js" data-ackee-server="https://vim.screenshot.download" data-ackee-domain-id="1ce83615-e193-42eb-96cf-ade09f75cae3" data-ackee-opts='{ "detailed": true }'></script>
 			</html>
